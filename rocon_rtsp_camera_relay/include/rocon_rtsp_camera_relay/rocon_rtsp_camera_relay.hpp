@@ -16,6 +16,8 @@
 #include<sensor_msgs/Image.h>
 #include<sensor_msgs/CameraInfo.h>
 
+#include<camera_info_manager/camera_info_manager.h>
+
 namespace rocon {
 
 class RoconRtspCameraRelay {
@@ -40,6 +42,7 @@ class RoconRtspCameraRelay {
     ros::Publisher pub_camera_info_;
     ros::Publisher pub_status_;
     ros::NodeHandle nh_;
+    camera_info_manager::CameraInfoManager cinfo_manager_;
 };
 }
 

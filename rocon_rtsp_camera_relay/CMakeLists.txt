@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   std_msgs
   sensor_msgs
+  camera_info_manager
 )
 
 find_package(OpenCV)
@@ -14,7 +15,7 @@ find_package(OpenCV)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES rocon_rtsp_camera_relay
-  CATKIN_DEPENDS roscpp cv_bridge image_transport sensor_msgs std_msgs
+  CATKIN_DEPENDS roscpp cv_bridge image_transport sensor_msgs std_msgs camera_info_manager
   DEPENDS OpenCV
 )
 
